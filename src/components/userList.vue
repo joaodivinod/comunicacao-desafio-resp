@@ -10,7 +10,7 @@
     </div>
     <!--  usuario  -->
 
-    <div v-for="user in users" :key="user.id">
+    <div class="users" v-for="user in users" :key="user.id">
       <div class="user">
         <p>{{user.id}}</p>
         <p>{{user.name}}</p>
@@ -36,7 +36,17 @@ name: "userList",
   color: #fff;
   padding: 15px;
 }
-.user{
-
+hr{
+  margin-top: -20px;
+  opacity: 0.3;
+  width: 98%;
+}
+.users{
+  cursor: pointer;
+  transition: 300ms;
+}
+.users:hover{
+  background-color: #272746;
+  transform: scale(1.1);
 }
 </style>
